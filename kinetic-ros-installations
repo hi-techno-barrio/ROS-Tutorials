@@ -2,6 +2,7 @@ Fresh kinetic-ros installations
 
 
 
+
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
  
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
@@ -16,7 +17,21 @@ $ source ~/.bashrc
 $ sudo apt-get install python-rosinstall
 
 rosdep install -ay --os=ubuntu:kinetic
-
-
 sudo apt-get install ros-kinetic-moveit-visual-tools
-rosdep install --from-paths src --ignore-src --rosdistro kineti
+rosdep install --from-paths src --ignore-src --rosdistro kinetic
+
+ros-kinetic-calibration-msgs ros-kinetic-click
+ros-kinetic-dynamic-tf-publisher ros-kinetic-image-cb-detector
+ros-kinetic-image-exposure-msgs ros-kinetic-image-overlay-scale-and-compass
+ros-kinetic-image-recognition ros-kinetic-image-recognition-msgs
+ros-kinetic-image-recognition-rqt ros-kinetic-image-recognition-util
+ros-kinetic-image-stream ros-kinetic-image-view2 ros-kinetic-imagesift
+ros-kinetic-imagezero ros-kinetic-imagezero-image-transport
+ros-kinetic-imagezero-ros ros-kinetic-jsk-footstep-msgs
+ros-kinetic-jsk-recognition-msgs ros-kinetic-jsk-recognition-utils
+ros-kinetic-jsk-topic-tools ros-kinetic-libsiftfast ros-kinetic-openface-ros
+ros-kinetic-posedetection-msgs ros-kinetic-rosjson ros-kinetic-rosweb
+ros-kinetic-skybiometry-ros ros-kinetic-sound-play
+ros-kinetic-statistics-msgs ros-kinetic-tensorflow-ros
+
+ sudo apt-get install ros-kinetic-urdf-sim-tutorial 
