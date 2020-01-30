@@ -65,7 +65,11 @@ ros-kinetic-statistics-msgs ros-kinetic-tensorflow-ros
   Reference: https://forum.siduction.org/index.php?topic=5944.0
 
 ERROR:Problem with MergeList /var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_xenial_universe_binary-armhf_Packages
-
    sudo rm -r /var/lib/apt/lists/*
    sudo apt-get clean
    sudp apt-get update
+   
+ ERROR: The package lists or status file could not be parsed or opened.
+   sudo mv /var/lib/dpkg/status /var/lib/dpkg/status.bad
+   sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
+   sudo apt-get update   
