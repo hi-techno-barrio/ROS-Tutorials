@@ -28,16 +28,16 @@ cd $HOME_DIR /xentrinobot_ws/src
 catkin_init_workspace
 
 // BASIC  MODULE FOR ROS 1
-sudo apt-get installros-kinetic-roslint 
-sudo apt-get installros-kinetic-rosserial 
-sudo apt-get installros-kinetic-rosserial-arduino 
-sudo apt-get installros-kinetic-imu-filter-madgwick 
-sudo apt-get installros-kinetic-gmapping 
-sudo apt-get installros-kinetic-map-server 
-sudo apt-get installros-kinetic-navigation 
-sudo apt-get installros-kinetic-robot-localization 
-sudo apt-get installros-kinetic-tf2 
-sudo apt-get installros-kinetic-tf2-ros 
+sudo apt-get install ros-kinetic-roslint 
+sudo apt-get install ros-kinetic-rosserial 
+sudo apt-get install ros-kinetic-rosserial-arduino 
+sudo apt-get install ros-kinetic-imu-filter-madgwick 
+sudo apt-get install ros-kinetic-gmapping 
+sudo apt-get install ros-kinetic-map-server 
+sudo apt-get install ros-kinetic-navigation 
+sudo apt-get install ros-kinetic-robot-localization 
+sudo apt-get install ros-kinetic-tf2 
+sudo apt-get install ros-kinetic-tf2-ros 
 sudo apt-get install ros-kinetic-moveit-visual-tools
 
 ros-kinetic-calibration-msgs ros-kinetic-click
