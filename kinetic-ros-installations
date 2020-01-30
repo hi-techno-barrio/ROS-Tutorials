@@ -73,3 +73,7 @@ ERROR:Problem with MergeList /var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_di
    sudo mv /var/lib/dpkg/status /var/lib/dpkg/status.bad
    sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
    sudo apt-get update   
+   
+ERROR: ValueError:bad marshal data
+ sudo find /usr -name '*.pyc' -delete
+ sudo -rm /usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/properties.pyc
