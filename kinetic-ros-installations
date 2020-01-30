@@ -80,3 +80,17 @@ ERROR: ValueError:bad marshal data
  sudo apt-get purge awscli
  sudo apt-get autoremove
  sudo apt-get install awscli
+ 
+ 
+ 
+[ACTIVATING WIFI] 
+Check device list
+$ nmcli dev
+Note: if the status of a device is "unmanaged" it means that device cannot be accessed by NetworkManager. To make it accessed you need to clear the settings under "/etc/network/interfaces" and reboot your system.
+
+Start WiFi
+$ nmcli r wifi on
+Scan Surrounding WiFi Sources
+$ nmcli dev wifi
+Connect to a WiFi Source
+$ nmcli dev wifi connect "SSID" password "PASSWORD" ifname wlan0
