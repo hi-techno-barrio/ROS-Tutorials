@@ -22,6 +22,24 @@ rosdep install --from-paths src --ignore-src --rosdistro kinetic
 sudo apt-get update
 sudo apt-get install -y avahi-daemon openssh-server python-setuptools python-dev build-essential python-gudev
 
+cd $HOME_DIR
+mkdir -p xentrinobot_ws/src
+cd $HOME_DIR /xentrinobot_ws/src
+catkin_init_workspace
+
+// BASIC  MODULE FOR ROS 1
+sudo apt-get installros-kinetic-roslint 
+sudo apt-get installros-kinetic-rosserial 
+sudo apt-get installros-kinetic-rosserial-arduino 
+sudo apt-get installros-kinetic-imu-filter-madgwick 
+sudo apt-get installros-kinetic-gmapping 
+sudo apt-get installros-kinetic-map-server 
+sudo apt-get installros-kinetic-navigation 
+sudo apt-get installros-kinetic-robot-localization 
+sudo apt-get installros-kinetic-tf2 
+sudo apt-get installros-kinetic-tf2-ros 
+
+
 ros-kinetic-calibration-msgs ros-kinetic-click
 ros-kinetic-dynamic-tf-publisher ros-kinetic-image-cb-detector
 ros-kinetic-image-exposure-msgs ros-kinetic-image-overlay-scale-and-compass
