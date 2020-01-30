@@ -1,23 +1,23 @@
 Fresh kinetic-ros installations
 
 
-
-
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
-
 sudo apt-get update
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+// sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
+wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install dpkg
+
 sudo apt-get install ros-kinetic-desktop-full
 sudo rosdep init
 rosdep update
+rosdep install -ay --os=ubuntu:kinetic
+rosdep install --from-paths src --ignore-src --rosdistro kinetic
+sudo apt-get install python-rosinstall
+
 source /opt/ros/kinetic/setup.bash
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-sudo apt-get install python-rosinstall
-
-rosdep install -ay --os=ubuntu:kinetic
-sudo apt-get install ros-kinetic-moveit-visual-tools
-rosdep install --from-paths src --ignore-src --rosdistro kinetic
 
 sudo apt-get update
 sudo apt-get install -y avahi-daemon openssh-server python-setuptools python-dev build-essential python-gudev
@@ -38,7 +38,7 @@ sudo apt-get installros-kinetic-navigation
 sudo apt-get installros-kinetic-robot-localization 
 sudo apt-get installros-kinetic-tf2 
 sudo apt-get installros-kinetic-tf2-ros 
-
+sudo apt-get install ros-kinetic-moveit-visual-tools
 
 ros-kinetic-calibration-msgs ros-kinetic-click
 ros-kinetic-dynamic-tf-publisher ros-kinetic-image-cb-detector
