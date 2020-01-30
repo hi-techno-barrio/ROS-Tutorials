@@ -11,7 +11,6 @@ sudo apt-get -y install dpkg
 sudo apt-get install ros-kinetic-desktop-full
 sudo rosdep init
 rosdep update
-rosdep install -ay --os=ubuntu:kinetic
 rosdep install --from-paths src --ignore-src --rosdistro kinetic
 sudo apt-get install python-rosinstall
 
@@ -57,6 +56,7 @@ ros-kinetic-statistics-msgs ros-kinetic-tensorflow-ros
  sudo apt-get install ros-kinetic-urdf-sim-tutorial 
  
  TROUBLE SHOOTING
+ rosdep install -ay --os=ubuntu:kinetic
  
  ERROR: Error: You don't have enough free space in /var/cache/apt/archives/.
   sudo apt-get clean 
